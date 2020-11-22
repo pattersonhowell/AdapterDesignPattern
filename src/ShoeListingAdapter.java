@@ -1,4 +1,8 @@
-
+/**
+ * Class to adapt a shoe listing into to product listing
+ * @author pattersonhowell
+ *
+ */
 public class ShoeListingAdapter implements ProductListing {
 
 	private ShoeListing shoe;
@@ -7,7 +11,10 @@ public class ShoeListingAdapter implements ProductListing {
 	private double price;
 	private String description;
 	
-	
+	/**
+	 * Creating a (product) listing for a shoe
+	 * @param shoe Shoe to create (product) listing for
+	 */
 	public ShoeListingAdapter(ShoeListing shoe) {
 		
 		this.title = shoe.toString().substring(shoe.toString().indexOf("Shoe: ") + 6, shoe.toString().indexOf("\nBy: "));
@@ -19,16 +26,23 @@ public class ShoeListingAdapter implements ProductListing {
 		this.shoe = shoe; 
 	}
 	
+	/**
+	 * Getting the title
+	 */
 	public String getTitle() {
 		return title;
 	}
 	
-	
+	/**
+	 * Getting the price
+	 */
 	public double getPrice() {
 		return price;
 	}
 	
-	
+	/**
+	 * Getting the description
+	 */
 	public String getDescription() {
 		return description;
 	}
